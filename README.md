@@ -1,1 +1,1 @@
-# MintChocaChip.github.io test
+# MintChocaChip.github.io
