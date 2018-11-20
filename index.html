@@ -65,7 +65,7 @@
   <table id="tbl">
     <thead>
       <tr>
-        <td>
+        <td style="border: none">
           <span class="bgthead" >
             <select style="width:140px" name="features" onchange="alterColumn(this.selectedIndex)">
               <option value="1">HG</option>
@@ -79,7 +79,9 @@
           </span>
         </td>
         <td style="border: none">
-          <select style="width:220px"></select>
+          <select style="width:290px" name="skin" id="skin" onchange="skinSelect()">
+            <option value="" disabled selected></option>
+          </select>
         </td>
       </tr>
     </thead>
@@ -90,8 +92,8 @@
             <input type="radio" name="character" value="Grizzly" id="Grizzly" onchange="selected();"><label for="Grizzly">Grizzly</label>
           </div>
         </td>
-        <th style="width:503px;background-color: #ffffff;text-align:center">Uncensored</th>
-        <th style="width:503px;background-color: #ffffff;text-align:center">Censored</th>
+        <th style="width:595px;background-color: #ffffff;text-align:center">Uncensored</th>
+        <th style="width:595px;background-color: #ffffff;text-align:center">Censored</th>
       </tr>
       <tr class="alt">
         <td class="ag" style="background-color: #ffb600">
@@ -99,8 +101,8 @@
             <input type="radio" name="character" value="Welrod MkII" id="Welrod MkII" onchange="selected();"><label for="Welrod MkII">Welrod MkII</label>
           </div>
         </td>
-        <td style="height:503px;width:503px;background-color: #ffffff" rowspan="22" id="uncensored image"></td>
-        <td style="height:503px;width:503px;background-color: #ffffff" rowspan="22" id="censored image"></td>
+        <td style="height:595px;width:503px;background-color: #ffffff" rowspan="26" id="uncensored image"></td>
+        <td style="height:595px;width:503px;background-color: #ffffff" rowspan="26" id="censored image"></td>
       </tr>
       <tr>
         <td class="ag" style="background-color: #ffb600">
@@ -119,7 +121,7 @@
       <tr>
         <td class="ag" style="background-color: #d6e35a">
           <div class="radiowrapper" id="wrap5">
-            <input type="radio" name="character" value="Mk23" id="Mk23" onchange="selected();"><label for="Mk23">Mk23</label>
+            <input type="radio" name="character" value="Gr Mk23" id="Gr Mk23" onchange="selected();"><label for="Gr Mk23">Gr Mk23</label>
           </div>
         </td>
       </tr>
@@ -233,8 +235,25 @@
       <tr>
         <td class="ag" style="background-color: #b7b7b7;border:none">&nbsp;</td>
       </tr>
+      <tr>
+        <td class="ag" style="background-color: #b7b7b7;border:none">&nbsp;</td>
+      </tr>
+      <tr>
+        <td class="ag" style="background-color: #b7b7b7;border:none">&nbsp;</td>
+      </tr>
+      <tr>
+        <td class="ag" style="background-color: #b7b7b7;border:none">&nbsp;</td>
+      </tr>
+      <tr>
+        <td class="ag" style="background-color: #b7b7b7;border:none">&nbsp;</td>
+      </tr>
     </tbody>
   </table>
+  <br><br>
+  Updated: 2018-11-20
+  <br>
+  By Vanilla
+
 
   <script type="text/javascript">
 
@@ -245,7 +264,7 @@
     '<div class="radiowrapper" id="wrap2"><input type="radio" name="character" value="Welrod MkII" id="Welrod MkII" onchange="selected();"><label for="Welrod MkII">Welrod MkII</label></div>',
     '<div class="radiowrapper" id="wrap3"><input type="radio" name="character" value="Five-seven" id="Five-seven" onchange="selected();"><label for="Five-seven">Five-seven</label></div>',
     '<div class="radiowrapper" id="wrap4"><input type="radio" name="character" value="Px4 Storm" id="Px4 Storm" onchange="selected();"><label for="Px4 Storm">Px4 Storm</label></div>',
-    '<div class="radiowrapper" id="wrap5"><input type="radio" name="character" value="Mk23" id="Mk23" onchange="selected();"><label for="Mk23">Mk23</label></div>',
+    '<div class="radiowrapper" id="wrap5"><input type="radio" name="character" value="Gr Mk23" id="Gr Mk23" onchange="selected();"><label for="Gr Mk23">Gr Mk23</label></div>',
     '<div class="radiowrapper" id="wrap6"><input type="radio" name="character" value="P7" id="P7" onchange="selected();"><label for="P7">P7</label></div>',
     '<div class="radiowrapper" id="wrap7"><input type="radio" name="character" value="M1911 mod" id="M1911 mod" onchange="selected();"><label for="M1911 mod">M1911 mod</label></div>',
     '<div class="radiowrapper" id="wrap8"><input type="radio" name="character" value="Tokarev" id="Tokarev" onchange="selected();"><label for="Tokarev">Tokarev</label></div>',
@@ -260,7 +279,7 @@
     '<div class="radiowrapper" id="wrap17"><input type="radio" name="character" value="PPK" id="PPK" onchange="selected();"><label for="PPK">PPK</label></div>',
     '<div class="radiowrapper" id="wrap18"><input type="radio" name="character" value="FF FNP9" id="FF FNP9" onchange="selected();"><label for="FF FNP9">FF FNP9</label></div>',
     '<div class="radiowrapper" id="wrap19"><input type="radio" name="character" value="Noel" id="Noel" onchange="selected();"><label for="Noel">Noel</label></div>',
-    '&nbsp','&nbsp','&nbsp','&nbsp'],
+    '&nbsp','&nbsp','&nbsp','&nbsp','&nbsp','&nbsp','&nbsp','&nbsp'],
     ['<div class="radiowrapper" id="wrap1"><input type="radio" name="character" value="Thompson" id="Thompson" onchange="selected();"><label for="Thompson">Thompson</label></div>',
     '<div class="radiowrapper" id="wrap2"><input type="radio" name="character" value="Vector" id="Vector" onchange="selected();"><label for="Vector">Vector</label></div>',
     '<div class="radiowrapper" id="wrap3"><input type="radio" name="character" value="Gr G36c" id="Gr G36c" onchange="selected();"><label for="Gr G36c">Gr G36c</label></div>',
@@ -279,29 +298,30 @@
     '<div class="radiowrapper" id="wrap16"><input type="radio" name="character" value="m45" id="m45" onchange="selected();"><label for="m45">m45</label></div>',
     '<div class="radiowrapper" id="wrap17"><input type="radio" name="character" value="Spectre M4" id="Spectre M4" onchange="selected();"><label for="Spectre M4">Spectre M4</label></div>',
     '<div class="radiowrapper" id="wrap18"><input type="radio" name="character" value="Type64" id="Type64" onchange="selected();"><label for="Type64">Type64</label></div>',
-    '&nbsp','&nbsp','&nbsp','&nbsp','&nbsp'],
+    '&nbsp','&nbsp','&nbsp','&nbsp','&nbsp','&nbsp','&nbsp','&nbsp','&nbsp'],
     ['<div class="radiowrapper" id="wrap1"><input type="radio" name="character" value="Kar98k" id="Kar98k" onchange="selected();"><label for="Kar98k">Kar98k</label></div>',
     '<div class="radiowrapper" id="wrap2"><input type="radio" name="character" value="Lee Enfield" id="Lee Enfield" onchange="selected();"><label for="Lee Enfield">Lee Enfield</label></div>',
     '<div class="radiowrapper" id="wrap3"><input type="radio" name="character" value="M99" id="M99" onchange="selected();"><label for="M99">M99</label></div>',
     '<div class="radiowrapper" id="wrap4"><input type="radio" name="character" value="Gd DSR-50" id="Gd DSR-50" onchange="selected();"><label for="Gd DSR-50">Gd DSR-50</label></div>',
     '<div class="radiowrapper" id="wrap5"><input type="radio" name="character" value="Ballista" id="Ballista" onchange="selected();"><label for="Ballista">Ballista</label></div>',
-    '<div class="radiowrapper" id="wrap6"><input type="radio" name="character" value="Mosin-Nagant mod" id="Mosin-Nagant mod" onchange="selected();"><label for="Mosin-Nagant mod">Mosin-Nagant mod</label></div>',
-    '<div class="radiowrapper" id="wrap7"><input type="radio" name="character" value="Mosin-Nagant" id="Mosin-Nagant" onchange="selected();"><label for="Mosin-Nagant">Mosin-Nagant</label></div>',
-    '<div class="radiowrapper" id="wrap8"><input type="radio" name="character" value="PTRD" id="PTRD" onchange="selected();"><label for="PTRD">PTRD</label></div>',
-    '<div class="radiowrapper" id="wrap9"><input type="radio" name="character" value="Gr PSG-1" id="Gr PSG-1" onchange="selected();"><label for="Gr PSG-1">Gr PSG-1</label></div>',
-    '<div class="radiowrapper" id="wrap10"><input type="radio" name="character" value="Gr G28" id="Gr G28" onchange="selected();"><label for="Gr G28">Gr G28</label></div>',
-    '<div class="radiowrapper" id="wrap11"><input type="radio" name="character" value="SPR A3G" id="SPR A3G" onchange="selected();"><label for="SPR A3G">SPR A3G</label></div>',
-    '<div class="radiowrapper" id="wrap12"><input type="radio" name="character" value="SV-98 mod" id="SV-98 mod" onchange="selected();"><label for="SV-98 mod">SV-98 mod</label></div>',
-    '<div class="radiowrapper" id="wrap13"><input type="radio" name="character" value="M1 Garand" id="M1 Garand" onchange="selected();"><label for="M1 Garand">M1 Garand</label></div>',
-    '<div class="radiowrapper" id="wrap14"><input type="radio" name="character" value="M21" id="M21" onchange="selected();"><label for="M21">M21</label></div>',
-    '<div class="radiowrapper" id="wrap15"><input type="radio" name="character" value="SV-98" id="SV-98" onchange="selected();"><label for="SV-98">SV-98</label></div>',
-    '<div class="radiowrapper" id="wrap16"><input type="radio" name="character" value="Type56" id="Type56" onchange="selected();"><label for="Type56">Type56</label></div>',
-    '<div class="radiowrapper" id="wrap17"><input type="radio" name="character" value="Type88" id="Type88" onchange="selected();"><label for="Type88">Type88</label></div>',
-    '<div class="radiowrapper" id="wrap18"><input type="radio" name="character" value="SVT-38" id="SVT-38" onchange="selected();"><label for="SVT-38">SVT-38</label></div>',
-    '<div class="radiowrapper" id="wrap19"><input type="radio" name="character" value="Simonova" id="Simonova" onchange="selected();"><label for="Simonova">Simonova</label></div>',
-    '<div class="radiowrapper" id="wrap20"><input type="radio" name="character" value="G43" id="G43" onchange="selected();"><label for="G43">G43</label></div>',
-    '<div class="radiowrapper" id="wrap21"><input type="radio" name="character" value="VM59" id="VM59" onchange="selected();"><label for="VM59">VM59</label></div>',
-    '&nbsp','&nbsp'],
+    '<div class="radiowrapper" id="wrap6"><input type="radio" name="character" value="TAC-50" id="TAC-50" onchange="selected();"><label for="TAC-50">TAC-50</label></div>',
+    '<div class="radiowrapper" id="wrap7"><input type="radio" name="character" value="Mosin-Nagant mod" id="Mosin-Nagant mod" onchange="selected();"><label for="Mosin-Nagant mod">Mosin-Nagant mod</label></div>',
+    '<div class="radiowrapper" id="wrap8"><input type="radio" name="character" value="Mosin-Nagant" id="Mosin-Nagant" onchange="selected();"><label for="Mosin-Nagant">Mosin-Nagant</label></div>',
+    '<div class="radiowrapper" id="wrap9"><input type="radio" name="character" value="PTRD" id="PTRD" onchange="selected();"><label for="PTRD">PTRD</label></div>',
+    '<div class="radiowrapper" id="wrap10"><input type="radio" name="character" value="Gr PSG-1" id="Gr PSG-1" onchange="selected();"><label for="Gr PSG-1">Gr PSG-1</label></div>',
+    '<div class="radiowrapper" id="wrap11"><input type="radio" name="character" value="Gr G28" id="Gr G28" onchange="selected();"><label for="Gr G28">Gr G28</label></div>',
+    '<div class="radiowrapper" id="wrap12"><input type="radio" name="character" value="SPR A3G" id="SPR A3G" onchange="selected();"><label for="SPR A3G">SPR A3G</label></div>',
+    '<div class="radiowrapper" id="wrap13"><input type="radio" name="character" value="SV-98 mod" id="SV-98 mod" onchange="selected();"><label for="SV-98 mod">SV-98 mod</label></div>',
+    '<div class="radiowrapper" id="wrap14"><input type="radio" name="character" value="M1 Garand" id="M1 Garand" onchange="selected();"><label for="M1 Garand">M1 Garand</label></div>',
+    '<div class="radiowrapper" id="wrap15"><input type="radio" name="character" value="M21" id="M21" onchange="selected();"><label for="M21">M21</label></div>',
+    '<div class="radiowrapper" id="wrap16"><input type="radio" name="character" value="SV-98" id="SV-98" onchange="selected();"><label for="SV-98">SV-98</label></div>',
+    '<div class="radiowrapper" id="wrap17"><input type="radio" name="character" value="Type56" id="Type56" onchange="selected();"><label for="Type56">Type56</label></div>',
+    '<div class="radiowrapper" id="wrap18"><input type="radio" name="character" value="Type88" id="Type88" onchange="selected();"><label for="Type88">Type88</label></div>',
+    '<div class="radiowrapper" id="wrap19"><input type="radio" name="character" value="SVT-38" id="SVT-38" onchange="selected();"><label for="SVT-38">SVT-38</label></div>',
+    '<div class="radiowrapper" id="wrap20"><input type="radio" name="character" value="Simonova" id="Simonova" onchange="selected();"><label for="Simonova">Simonova</label></div>',
+    '<div class="radiowrapper" id="wrap21"><input type="radio" name="character" value="G43" id="G43" onchange="selected();"><label for="G43">G43</label></div>',
+    '<div class="radiowrapper" id="wrap22"><input type="radio" name="character" value="VM59" id="VM59" onchange="selected();"><label for="VM59">VM59</label></div>',
+    '&nbsp','&nbsp','&nbsp','&nbsp','&nbsp'],
     ['<div class="radiowrapper" id="wrap1"><input type="radio" name="character" value="Gr G41" id="Gr G41" onchange="selected();"><label for="Gr G41">Gr G41</label></div>',
     '<div class="radiowrapper" id="wrap2"><input type="radio" name="character" value="FAL" id="FAL" onchange="selected();"><label for="FAL">FAL</label></div>',
     '<div class="radiowrapper" id="wrap3"><input type="radio" name="character" value="Type95" id="Type95" onchange="selected();"><label for="Type95">Type95</label></div>',
@@ -319,7 +339,7 @@
     '<div class="radiowrapper" id="wrap15"><input type="radio" name="character" value="CZ-805" id="CZ-805" onchange="selected();"><label for="CZ-805">CZ-805</label></div>',
     '<div class="radiowrapper" id="wrap16"><input type="radio" name="character" value="SIG-510" id="SIG-510" onchange="selected();"><label for="SIG-510">SIG-510</label></div>',
     '<div class="radiowrapper" id="wrap17"><input type="radio" name="character" value="FF F2000" id="FF F2000" onchange="selected();"><label for="FF F2000">FF F2000</label></div>',
-    '&nbsp','&nbsp','&nbsp','&nbsp','&nbsp','&nbsp'],
+    '&nbsp','&nbsp','&nbsp','&nbsp','&nbsp','&nbsp','&nbsp','&nbsp','&nbsp','&nbsp'],
     ['<div class="radiowrapper" id="wrap1"><input type="radio" name="character" value="Gr MG5" id="Gr MG5" onchange="selected();"><label for="Gr MG5">Gr MG5</label></div>',
     '<div class="radiowrapper" id="wrap2"><input type="radio" name="character" value="Gr MG4" id="Gr MG4" onchange="selected();"><label for="Gr MG4">Gr MG4</label></div>',
     '<div class="radiowrapper" id="wrap3"><input type="radio" name="character" value="Type 88" id="Type 88" onchange="selected();"><label for="Type 88">Type 88</label></div>',
@@ -335,16 +355,16 @@
     '<div class="radiowrapper" id="wrap13"><input type="radio" name="character" value="MG42" id="MG42" onchange="selected();"><label for="MG42">MG42</label></div>',
     '<div class="radiowrapper" id="wrap14"><input type="radio" name="character" value="LWMMG" id="LWMMG" onchange="selected();"><label for="LWMMG">LWMMG</label></div>',
     '<div class="radiowrapper" id="wrap15"><input type="radio" name="character" value="DP28" id="DP28" onchange="selected();"><label for="DP28">DP28</label></div>',
-    '&nbsp','&nbsp','&nbsp','&nbsp','&nbsp','&nbsp','&nbsp','&nbsp'],
+    '&nbsp','&nbsp','&nbsp','&nbsp','&nbsp','&nbsp','&nbsp','&nbsp','&nbsp','&nbsp','&nbsp','&nbsp'],
     ['<div class="radiowrapper" id="wrap1"><input type="radio" name="character" value="M37" id="M37" onchange="selected();"><label for="M37">M37</label></div>',
     '<div class="radiowrapper" id="wrap2"><input type="radio" name="character" value="M590" id="M590" onchange="selected();"><label for="M590">M590</label></div>',
     '&nbsp','&nbsp','&nbsp','&nbsp','&nbsp','&nbsp','&nbsp','&nbsp',
     '&nbsp','&nbsp','&nbsp','&nbsp','&nbsp','&nbsp','&nbsp','&nbsp',
-    '&nbsp','&nbsp','&nbsp','&nbsp','&nbsp'],
+    '&nbsp','&nbsp','&nbsp','&nbsp','&nbsp','&nbsp','&nbsp','&nbsp','&nbsp'],
     ['<div class="radiowrapper" id="wrap1"><input type="radio" name="character" value="Kalina" id="Kalina" onchange="selected();"><label for="Kalina">Kalina</label></div>',
     '&nbsp','&nbsp','&nbsp','&nbsp','&nbsp','&nbsp','&nbsp','&nbsp',
     '&nbsp','&nbsp','&nbsp','&nbsp','&nbsp','&nbsp','&nbsp','&nbsp',
-    '&nbsp','&nbsp','&nbsp','&nbsp','&nbsp','&nbsp']
+    '&nbsp','&nbsp','&nbsp','&nbsp','&nbsp','&nbsp','&nbsp','&nbsp','&nbsp','&nbsp']
   ];
   function alterColumn(grp) {
     var sel = document.getElementById('tblBody').getElementsByTagName('td');
@@ -390,19 +410,19 @@
             sel[i].style.border = 'none';
           }
         } else if (grp == 2) {
-          if (k >= 0 && k < 6) {
+          if (k >= 0 && k < 7) {
             sel[i].style.backgroundColor = '#ffb600';
             sel[i].style.border = '1px solid black';
-          } else if (k >= 6 && k < 12) {
+          } else if (k >= 7 && k < 13) {
             sel[i].style.backgroundColor = '#d6e35a';
             sel[i].style.border = '1px solid black';
-          } else if (k >= 12 && k < 17) {
+          } else if (k >= 13 && k < 18) {
             sel[i].style.backgroundColor = '#6bdfce';
             sel[i].style.border = '1px solid black';
-          } else if (k >= 17 && k < 21) {
+          } else if (k >= 18 && k < 22) {
             sel[i].style.backgroundColor = '#ffffff';
             sel[i].style.border = '1px solid black';
-          } else if (k >= 21 && k <24) {
+          } else if (k >= 22 && k <24) {
             sel[i].style.backgroundColor = '#b7b7b7';
             sel[i].style.border = 'none';
           }
@@ -475,15 +495,1037 @@
     var cImageCell = document.getElementById("censored image");
 
     if (character_value == "Grizzly") {
-      uncImageCell.innerHTML = '<img src="https://imgur.com/QAFLAxo.png" alt="pic_grizzly_D_nom" style="display:block;" height="100%">';
-      cImageCell.innerHTML = '<img src="https://imgur.com/pIETT5O.png" alt="pic_grizzly_D_he" style="display:block;" height="100%">';
+      uncImageCell.innerHTML = '<img src="https://imgur.com/QAFLAxo.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/pIETT5O.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = '<option>Damaged</option>';
+
     } else if (character_value == "Welrod MkII") {
-      uncImageCell.innerHTML = '<img src="https://imgur.com/n6V1PIW.png" alt="pic_welrod_D_nom" style="display:block;" height="100%">';
-      cImageCell.innerHTML = '<img src="https://imgur.com/2drSAot.png" alt="pic_welrod_D_he" style="display:block;" height="100%">';
+      uncImageCell.innerHTML = '<img src="https://imgur.com/n6V1PIW.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/2drSAot.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = ['<option value="0">Damaged</option>',
+      '<option value="1">Twilight Menace Damaged</option>'];
+
+    } else if (character_value == "Five-seven") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/EbvippK.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/Gv60tZq.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = ['<option value="0">Normal</option>',
+      '<option value="1">Damaged</option>',
+      '<option value="2">Cruise Queen Damaged</option>',
+      '<option value="3">Smile of Acceptance Damaged</option>'];
+
+    } else if (character_value == "Px4 Storm") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/90NEZ2O.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/F8nctPA.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = ['<option value="0">*Rejected* Normal</option>',
+      '<option value="1">*Rejected* Damaged</option>'];
+
+    } else if (character_value == "Gr Mk23") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/u5f5bci.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/vXaT1hY.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = ['<option value="0">Damaged</option>',
+      '<option value="1">Impish Sweetheart Normal</option>',
+      '<option value="2">Impish Sweetheart Damaged</option>',
+      '<option value="3">Honey Flower Normal</option>',
+      '<option value="4">Honey Flower Damaged</option>'];
+
+    } else if (character_value == "P7") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/Lqsp5hi.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/z6JPYAy.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = '<option>*EN exclusive* Pinky Swear Damaged</option>';
+
+    } else if (character_value == "M1911 mod") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/tujGqMz.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/ikI3L6u.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = '<option>Normal/Damaged selection art only</option>';
+
+    } else if (character_value == "Tokarev") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/q0VndXK.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/oDDb0bD.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = ['<option value="0">Damaged</option>',
+      '<option value="1">*EN exclusive* A Couple\'s Journey Normal</option>',
+      '<option value="2">*EN exclusive* A Couple\'s Journey Damaged</option>'];
+
+    } else if (character_value == "Makarov") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/EXC29To.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/6QZ40UO.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = '<option>Damaged</option>';
+
+    } else if (character_value == "P08") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/UojBZ0N.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/Oy4mCLK.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = ['<option value="0">Normal</option>',
+      '<option value="1">Damaged</option>'];
+
+    } else if (character_value == "C96") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/aleVNq2.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/vepiHZW.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = ['<option value="0">Normal</option>',
+      '<option value="1">Damaged</option>'];
+
+    } else if (character_value == "Astra") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/R0AgOYo.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/Mv9i10I.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = ['<option value="0">Normal</option>',
+      '<option value="1">Damaged</option>'];
+
+    } else if (character_value == "G17") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/H1VBIng.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/EV3nOWL.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = '<option>Damaged</option>';
+
+    } else if (character_value == "P99") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/4bib0ZX.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/qvsPftm.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = '<option>*EN exclusive* Damaged</option>';
+
+    } else if (character_value == "M1911") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/qscOpu3.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/R2Hu3BD.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = '<option>Damaged</option>';
+
+    } else if (character_value == "P38") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/Y0iz0g4.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/BqjG0iL.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = ['<option value="0">Normal</option>',
+      '<option value="1">Damaged</option>'];
+
+    } else if (character_value == "PPK") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/eSE1v1k.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/fyfc7vd.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = '<option>Damaged</option>';
+
+    } else if (character_value == "FF FNP9") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/FHfeG5Q.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/T92LYFi.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = '<option>Damaged</option>';
+
+    } else if (character_value == "Noel") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/2dl1Ahr.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/FEaWldd.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = '<option>μ-12 Damaged</option>';
+
+    } else if (character_value == "Thompson") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/oDp0It1.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/09DnCpx.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = '<option>Damaged</option>';
+
+    } else if (character_value == "Vector") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/YbaA7Yl.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/JvbXR16.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = '<option>Damaged</option>';
+
+    } else if (character_value == "Gr G36c") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/5hqRpPx.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/5SSxpS8.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = ['<option value="0">Normal</option>',
+      '<option value="1">Damaged</option>',
+      '<option value="2">Ode to Summer Damaged</option>'];
+
+    } else if (character_value == "Suomi") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/Ba1UxrT.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/PLWcAC2.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = ['<option value="0">Damaged</option>',
+      '<option value="1">Korvatunturi Pixie Damaged</option>',
+      '<option value="2">Midsummer Pixie Damaged</option>'];
+
+    } else if (character_value == "Type79") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/ws7ENEo.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/u3QHSom.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = '<option>Fox of Green Hill Damaged</option>';
+
+    } else if (character_value == "SR-3MP") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/QuG0XPS.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/mNa1L8k.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = ['<option value="0">*EN exclusive* Normal</option>',
+      '<option value="1">*EN exclusive* Damaged</option>'];
+
+    } else if (character_value == "JS 9") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/misUnBl.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/5qO751b.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = '<option>*Rejected* Damaged</option>';
+
+    } else if (character_value == "Honey Badger") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/YAyk1EM.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/GActSNs.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = '<option>Damaged</option>';
+
+    } else if (character_value == "PPS-43") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/3C9AH1U.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/p5bwnbf.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = '<option>Damaged</option>';
+
+    } else if (character_value == "STEN MkII") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/72AS4if.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/JGOKFVO.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = ['<option value="0">Damaged</option>',
+      '<option value="1">*EN exclusive* Reciprocated Love Damaged</option>'];
+
+    } else if (character_value == "Micro Uzi") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/lKwg7t4.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/P11y0Ft.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = ['<option value="0">Normal</option>',
+      '<option value="1">Damaged</option>'];
+
+    } else if (character_value == "Z-62") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/z4XR5Fd.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/ZDrKyKy.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = '<option>Damaged</option>';
+
+    } else if (character_value == "EVO 3") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/CpXAaee.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/MP7D7Nw.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = ['<option value="0">Normal</option>',
+      '<option value="1">Damaged</option>'];
+
+    } else if (character_value == "PP-2000") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/JdR1a3S.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/RkWlPZ2.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = '<option>Damaged</option>';
+
+    } else if (character_value == "MP40") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/rBME2rB.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/zGt6fL2.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = ['<option value="0">Normal</option>',
+      '<option value="1">Damaged</option>'];
+
+    } else if (character_value == "m45") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/fCOA25L.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/tEynj3d.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = '<option>Damaged</option>';
+
+    } else if (character_value == "Spectre M4") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/sg4zTBF.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/6Wv01ii.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = ['<option value="0">Normal</option>',
+      '<option value="1">Damaged</option>'];
+
+    } else if (character_value == "Type64") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/yiMxusU.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/a9P7FtI.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = ['<option value="0">Normal</option>',
+      '<option value="1">Damaged</option>'];
+
+    } else if (character_value == "Kar98k") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/0pPrQ4g.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/01gFwwh.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = ['<option value="0">Normal</option>',
+      '<option value="1">Damaged</option>'];
+
+    } else if (character_value == "Lee Enfield") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/iv6TmLr.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/TWx08cY.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = '<option>Damaged</option>';
+
+    } else if (character_value == "M99") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/8Mp9im4.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/iIVou4b.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = '<option>*EN exclusive* Damaged</option>';
+
+    } else if (character_value == "Gd DSR-50") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/35nvkfV.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/HM6eA0G.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = ['<option value="0">Red Peony Damaged</option>',
+      '<option value="1">Highest Bidder Normal</option>',
+      '<option value="2">Highest Bidder Damaged</option>',
+      '<option value="3">*Rejected* Highest Bidder Normal</option>',
+      '<option value="4">*Rejected* Highest Bidder Damaged</option>'];
+
+    } else if (character_value == "Ballista") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/zO57JN8.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/36HAo34.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = '<option>Damaged</option>';
+
+    } else if (character_value == "TAC-50") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/urkqR0Q.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/YieCMyB.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = '<option>*Rejected* Elven Demon Huntress Damaged</option>';
+
+    } else if (character_value == "Mosin-Nagant mod") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/cCKe9yw.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/yBdfB5Z.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = '<option>Normal</option>';
+
+    } else if (character_value == "Mosin-Nagant") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/ZG0G4qy.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/qHMYdSY.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = '<option>Damaged</option>';
+
+    } else if (character_value == "PTRD") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/8U61Rsq.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/fgPdYaL.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = ['<option value="0">Normal</option>',
+      '<option value="1">Damaged</option>',
+      '<option value="2">*Rejected* Romantic Mission Damaged v1</option>',
+      '<option value="3">*Rejected* Romantic Mission Damaged v2</option>'];
+
+    } else if (character_value == "Gr PSG-1") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/nB5unbn.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/1NzIlZC.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = '<option>Damaged</option>';
+
+    } else if (character_value == "Gr G28") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/ZEldpk0.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/tj5ZHsf.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = '<option>Wiesnbier Damaged</option>';
+
+    } else if (character_value == "SPR A3G") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/yqfjcqN.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/AkhxWhS.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = '<option>*Rejected* Damaged</option>';
+
+    } else if (character_value == "SV-98 mod") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/NeYWAQf.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/2HrgjlP.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = ['<option value="0">Normal</option>',
+      '<option value="1">Damaged</option>'];
+
+    } else if (character_value == "M1 Garand") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/FRSPXDu.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/eurMsWU.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = '<option>Damaged</option>';
+
+    } else if (character_value == "M21") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/zRiHNcK.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/QuUY9R8.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = '<option>Damaged</option>';
+
+    } else if (character_value == "SV-98") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/esmH39q.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/4VAWfZm.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = ['<option value="0">Normal</option>',
+      '<option value="1">Damaged</option>'];
+
+    } else if (character_value == "Type56") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/CcIpUF0.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/eMcrt9l.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = ['<option value="0">Normal</option>',
+      '<option value="1">Damaged</option>'];
+
+    } else if (character_value == "Type88") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/CHnvssv.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/q7N8xsO.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = ['<option value="0">Damaged</option>',
+      '<option value="1">Lotus of the East Lake Damaged</option>'];
+
+    } else if (character_value == "SVT-38") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/CHBqMCt.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/30Y1E64.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = '<option>Damaged</option>';
+
+    } else if (character_value == "Simonova") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/r8ByLlF.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/Igefm1c.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = '<option>Damaged</option>';
+
+    } else if (character_value == "G43") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/tlzdiih.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/UxI7hOF.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = ['<option value="0">Normal</option>',
+      '<option value="1">Damaged</option>'];
+
+    } else if (character_value == "VM59") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/Md4APhl.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/mFqFR3y.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = '<option>Damaged</option>';
+
+    } else if (character_value == "Gr G41") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/p6w7Jcn.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/Ed0mjcS.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = ['<option value="0">Normal</option>',
+      '<option value="1">Damaged</option>'];
+
+    } else if (character_value == "FAL") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/UHrLLf9.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/PlwjiHq.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = ['<option value="0">Normal</option>',
+      '<option value="1">The Big Day Damaged</option>'];
+
+    } else if (character_value == "Type95") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/TlIdMXj.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/7oj4t0K.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = ['<option value="0">Normal</option>',
+      '<option value="1">Summer Cicada Normal</option>'];
+
+    } else if (character_value == "Am RFB") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/N3lXR2t.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/r38OYU9.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = '<option>RFB Stole Christmas Damaged</option>';
+
+    } else if (character_value == "ART556") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/UFhBICi.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/uk7pgWD.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = '<option>Lotus White Damaged</option>';
+
+    } else if (character_value == "K11") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/LoXWY6j.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/t9k1noG.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = ['<option value="0">*Rejected* Normal</option>',
+      '<option value="1">*Rejected* Damaged</option>'];
+
+    } else if (character_value == "M4 SOPMOD II") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/1ymOFG1.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/hemoMhU.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = ['<option value="0">Normal</option>',
+      '<option value="1">Damaged</option>'];
+
+    } else if (character_value == "AS Val") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/fcv2pGC.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/xtSc52i.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = ['<option value="0">Normal</option>',
+      '<option value="1">Damaged</option>'];
+
+    } else if (character_value == "Gr G36") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/EyqILAs.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/xjP7ADj.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = '<option>Damaged</option>';
+
+    } else if (character_value == "Type56-1") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/K3nEN0f.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/nNJePBK.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = ['<option value="0">Damaged</option>',
+      '<option value="1">As One, Forever Entwined Damaged</option>'];
+
+    } else if (character_value == "TAR-21") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/RoMotm6.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/sR1vTLr.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = '<option>Damaged</option>';
+
+    } else if (character_value == "9A-91") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/zAO3pM4.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/JBqEKZz.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = ['<option value="0">Normal</option>',
+      '<option value="1">Damaged</option>',
+      '<option value="2">Bullets Cafe Damaged</option>'];
+
+    } else if (character_value == "AK-47") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/7Yj5h6G.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/5sFBqOs.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = '<option>Damaged</option>';
+
+    } else if (character_value == "OTs-12") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/XHsgFNx.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/FL2fVtd.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = '<option>Damaged</option>';
+
+    } else if (character_value == "CZ-805") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/jhMIRTP.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/o0D0Zy8.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = ['<option value="0">Normal</option>',
+      '<option value="1">Damaged</option>'];
+
+    } else if (character_value == "SIG-510") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/JO66f9z.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/xeKg9z4.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = '<option>Damaged</option>';
+
+    } else if (character_value == "FF F2000") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/yOu1DlU.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/j294A8M.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = '<option>Damaged</option>';
+
+    } else if (character_value == "Gr MG5") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/OAJnnkR.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/x0UtMe0.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = ['<option value="0">Normal</option>',
+      '<option value="1">Damaged</option>'];
+
+    } else if (character_value == "Gr MG4") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/0sEWs4l.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/M1EJ89d.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = ['<option value="0">Normal</option>',
+      '<option value="1">Damaged</option>'];
+
+    } else if (character_value == "Type 88") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/G0ulwQ1.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/2sLVeAY.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = '<option>*Rejected* Damaged</option>';
+
+    } else if (character_value == "M1918 mod") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/Ifx3p5k.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/p2WKo7e.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = ['<option value="0">Normal</option>',
+      '<option value="1">Damaged</option>'];
+
+    } else if (character_value == "M1918") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/61mxUhV.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/CS25OC2.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = ['<option value="0">Damaged</option>',
+      '<option value="1">Bunny Girl Damaged</option>'];
+
+    } else if (character_value == "M60") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/LeBSEMf.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/T8tkQm2.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = '<option>Damaged</option>';
+
+    } else if (character_value == "PK") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/rnlPGck.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/ll9SelH.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = '<option>Damaged</option>';
+
+    } else if (character_value == "MG3") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/tmWo9Ca.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/lJqB0fX.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = '<option>Damaged</option>';
+
+    } else if (character_value == "Mk48") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/ggPRzVm.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/gQ6vluU.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = '<option>Normal</option>';
+
+    } else if (character_value == "M2HB") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/S2M07yD.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/y8PQ7ov.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = '<option>Damaged</option>';
+
+    } else if (character_value == "FF M249SAW") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/trzTPEM.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/dWt3v0N.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = ['<option value="0">Normal</option>',
+      '<option value="1">Damaged</option>'];
+
+    } else if (character_value == "M1919A4") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/hs4FNZA.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/oKtLDKL.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = ['<option value="0">Damaged</option>',
+      '<option value="1">Carmilla Normal</option>',
+      '<option value="2">Carmilla Damaged</option>'];
+
+    } else if (character_value == "MG42") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/QHc2Kcu.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/VrujMAW.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = '<option>Damaged</option>';
+
+    } else if (character_value == "LWMMG") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/qwxMmMr.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/yB7bT6M.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = ['<option value="0">Damaged</option>',
+      '<option value="1">Yellow Star-thistle Damaged</option>'];
+
+    } else if (character_value == "DP28") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/kWxp6Mt.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/0jwN4vk.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = '<option>Damaged</option>';
+
+    } else if (character_value == "M37") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/hGsg1Jt.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/hylvkDJ.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = '<option>Normal</option>';
+
+    } else if (character_value == "M590") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/De9zy3O.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/xxvCFz5.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = ['<option value="0">Snow Ipomoea Normal</option>',
+      '<option value="1">Snow Ipomoea Damaged</option>'];
+
+    } else if (character_value == "Kalina") {
+      uncImageCell.innerHTML = '<img src="https://imgur.com/noLcczf.png" style="display:block;" height="100%">';
+      cImageCell.innerHTML = '<img src="https://imgur.com/d095tps.png" style="display:block;" height="100%">';
+
+      document.getElementById("skin").innerHTML = '<option>Normal</option>';
+
     }
+
   }
 
+  function skinSelect() {
+    var characters = document.getElementsByName('character');
+    var character_value;
+    for(var i = 0; i < characters.length; i++){
+      if(characters[i].checked){
+        character_value = characters[i].value;
+      }
+    }
 
+    var uncImageCell = document.getElementById("uncensored image");
+    var cImageCell = document.getElementById("censored image");
+    var skin_value = document.getElementById('skin').value;
+
+    if (character_value == "Welrod MkII") {
+      if (skin_value == "0") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/n6V1PIW.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/2drSAot.png" style="display:block;" height="100%">';
+      } else if (skin_value == "1") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/vqozNmC.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/8tT9G5Z.png" style="display:block;" height="100%">';
+      }
+    } else if (character_value == "Five-seven") {
+      if (skin_value == "0") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/EbvippK.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/Gv60tZq.png" style="display:block;" height="100%">';
+      } else if (skin_value == "1") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/VzUTNVY.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/JKNrNeq.png" style="display:block;" height="100%">';
+      } else if (skin_value == "2") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/lAPMFxX.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/ZakjpO0.png" style="display:block;" height="100%">';
+      } else if (skin_value == "3") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/iU2rK2B.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/qxBB5e2.png" style="display:block;" height="100%">';
+      }
+    } else if (character_value == "Px4 Storm") {
+      if (skin_value == "0") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/90NEZ2O.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/F8nctPA.png" style="display:block;" height="100%">';
+      } else if (skin_value == "1") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/GOcBh6b.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/m99KxeC.png" style="display:block;" height="100%">';
+      }
+    } else if (character_value == "Gr Mk23") {
+      if (skin_value == "0") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/u5f5bci.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/vXaT1hY.png" style="display:block;" height="100%">';
+      } else if (skin_value == "1") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/P6ghbNl.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/EjMuszT.png" style="display:block;" height="100%">';
+      } else if (skin_value == "2") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/Mi7CoQP.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/HhhioE0.png" style="display:block;" height="100%">';
+      } else if (skin_value == "3") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/LoFGfcc.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/maGuyUj.png" style="display:block;" height="100%">';
+      } else if (skin_value == "4") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/YIKQ3NM.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/LobkoI3.png" style="display:block;" height="100%">';
+      }
+    } else if (character_value == "Tokarev") {
+      if (skin_value == "0") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/q0VndXK.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/oDDb0bD.png" style="display:block;" height="100%">';
+      } else if (skin_value == "1") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/ILndslp.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/Ca3NdkN.png" style="display:block;" height="100%">';
+      } else if (skin_value == "2") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/JoaxFVp.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/d83Mkva.png" style="display:block;" height="100%">';
+      }
+    } else if (character_value == "P08") {
+      if (skin_value == "0") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/UojBZ0N.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/Oy4mCLK.png" style="display:block;" height="100%">';
+      } else if (skin_value == "1") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/Qlm6rUQ.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/CIxkgj1.png" style="display:block;" height="100%">';
+      }
+    } else if (character_value == "C96") {
+      if (skin_value == "0") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/aleVNq2.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/vepiHZW.png" style="display:block;" height="100%">';
+      } else if (skin_value == "1") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/JzfuCvr.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/ur5GXpY.png" style="display:block;" height="100%">';
+      }
+    } else if (character_value == "Astra") {
+      if (skin_value == "0") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/R0AgOYo.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/Mv9i10I.png" style="display:block;" height="100%">';
+      } else if (skin_value == "1") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/ytIYlYS.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/3syMGvF.png" style="display:block;" height="100%">';
+      }
+    } else if (character_value == "P38") {
+      if (skin_value == "0") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/Y0iz0g4.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/BqjG0iL.png" style="display:block;" height="100%">';
+      } else if (skin_value == "1") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/mcxtzCf.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/jRrz7MR.png" style="display:block;" height="100%">';
+      }
+    } else if (character_value == "Gr G36c") {
+      if (skin_value == "0") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/5hqRpPx.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/5SSxpS8.png" style="display:block;" height="100%">';
+      } else if (skin_value == "1") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/v0wd6Qq.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/I7ck7Au.png" style="display:block;" height="100%">';
+      } else if (skin_value == "2") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/T3lTao7.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/HVYCtq7.png" style="display:block;" height="100%">';
+      }
+    } else if (character_value == "Suomi") {
+      if (skin_value == "0") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/Ba1UxrT.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/PLWcAC2.png" style="display:block;" height="100%">';
+      } else if (skin_value == "1") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/3vZs4Ls.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/xCGYb77.png" style="display:block;" height="100%">';
+      } else if (skin_value == "2") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/ZsSMYVL.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/KegpInS.png" style="display:block;" height="100%">';
+      }
+    } else if (character_value == "SR-3MP") {
+      if (skin_value == "0") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/QuG0XPS.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/mNa1L8k.png" style="display:block;" height="100%">';
+      } else if (skin_value == "1") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/beAdzN0.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/rhOPQ2I.png" style="display:block;" height="100%">';
+      }
+    } else if (character_value == "STEN MkII") {
+      if (skin_value == "0") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/72AS4if.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/JGOKFVO.png" style="display:block;" height="100%">';
+      } else if (skin_value == "1") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/7G3x9hK.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/QnFy4XE.png" style="display:block;" height="100%">';
+      }
+    } else if (character_value == "Micro Uzi") {
+      if (skin_value == "0") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/lKwg7t4.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/P11y0Ft.png" style="display:block;" height="100%">';
+      } else if (skin_value == "1") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/7veDWeF.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/jyIJ6TD.png" style="display:block;" height="100%">';
+      }
+    } else if (character_value == "EVO 3") {
+      if (skin_value == "0") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/CpXAaee.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/MP7D7Nw.png" style="display:block;" height="100%">';
+      } else if (skin_value == "1") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/1MIf5ja.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/ChSC5fM.png" style="display:block;" height="100%">';
+      }
+    } else if (character_value == "MP40") {
+      if (skin_value == "0") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/rBME2rB.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/zGt6fL2.png" style="display:block;" height="100%">';
+      } else if (skin_value == "1") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/A0XufYe.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/qEZlpBD.png" style="display:block;" height="100%">';
+      }
+    } else if (character_value == "Spectre M4") {
+      if (skin_value == "0") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/sg4zTBF.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/6Wv01ii.png" style="display:block;" height="100%">';
+      } else if (skin_value == "1") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/4OH2lNo.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/ZVsEcrh.png" style="display:block;" height="100%">';
+      }
+    } else if (character_value == "Type64") {
+      if (skin_value == "0") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/CkadUts.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/2EyKnY4.png" style="display:block;" height="100%">';
+      } else if (skin_value == "1") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/a9P7FtI.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/yiMxusU.png" style="display:block;" height="100%">';
+      }
+    } else if (character_value == "Kar98k") {
+      if (skin_value == "0") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/0pPrQ4g.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/01gFwwh.png" style="display:block;" height="100%">';
+      } else if (skin_value == "1") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/rFGPYrf.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/BgPAIXL.png" style="display:block;" height="100%">';
+      }
+    } else if (character_value == "Gd DSR-50") {
+      if (skin_value == "0") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/35nvkfV.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/HM6eA0G.png" style="display:block;" height="100%">';
+      } else if (skin_value == "1") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/AN93EF0.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/mPBVFAK.png" style="display:block;" height="100%">';
+      } else if (skin_value == "2") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/ENNVE3c.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/DX4vQF7.png" style="display:block;" height="100%">';
+      } else if (skin_value == "3") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/AjURMmW.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/mPBVFAK.png" style="display:block;" height="100%">';
+      } else if (skin_value == "4") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/SWAn8hW.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/DX4vQF7.png" style="display:block;" height="100%">';
+      }
+    } else if (character_value == "PTRD") {
+      if (skin_value == "0") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/8U61Rsq.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/fgPdYaL.png" style="display:block;" height="100%">';
+      } else if (skin_value == "1") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/Vjk8Z4u.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/szgaRGu.png" style="display:block;" height="100%">';
+      } else if (skin_value == "2") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/oZ5BjHC.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/yu2yRzW.png" style="display:block;" height="100%">';
+      } else if (skin_value == "3") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/g3KaVpH.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/yu2yRzW.png" style="display:block;" height="100%">';
+      }
+    } else if (character_value == "SV-98 mod") {
+      if (skin_value == "0") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/NeYWAQf.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/2HrgjlP.png" style="display:block;" height="100%">';
+      } else if (skin_value == "1") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/KtXPl0o.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/WE8Alyj.png" style="display:block;" height="100%">';
+      }
+    } else if (character_value == "SV-98") {
+      if (skin_value == "0") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/esmH39q.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/4VAWfZm.png" style="display:block;" height="100%">';
+      } else if (skin_value == "1") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/88UycoB.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/nHCKFEo.png" style="display:block;" height="100%">';
+      }
+    } else if (character_value == "Type56") {
+      if (skin_value == "0") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/CcIpUF0.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/eMcrt9l.png" style="display:block;" height="100%">';
+      } else if (skin_value == "1") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/bdjR3O7.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/xKchUBw.png" style="display:block;" height="100%">';
+      }
+    } else if (character_value == "Type88") {
+      if (skin_value == "0") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/CHnvssv.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/q7N8xsO.png" style="display:block;" height="100%">';
+      } else if (skin_value == "1") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/H6FiUYp.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/eej7pAu.png" style="display:block;" height="100%">';
+      }
+    } else if (character_value == "G43") {
+      if (skin_value == "0") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/tlzdiih.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/UxI7hOF.png" style="display:block;" height="100%">';
+      } else if (skin_value == "1") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/BZHhoIb.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/cqBPLsG.png" style="display:block;" height="100%">';
+      }
+    } else if (character_value == "Gr G41") {
+      if (skin_value == "0") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/p6w7Jcn.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/Ed0mjcS.png" style="display:block;" height="100%">';
+      } else if (skin_value == "1") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/hxWBdMX.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/w07R5Ww.png" style="display:block;" height="100%">';
+      }
+    } else if (character_value == "FAL") {
+      if (skin_value == "0") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/UHrLLf9.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/PlwjiHq.png" style="display:block;" height="100%">';
+      } else if (skin_value == "1") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/APrFZqz.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/vyKdfPn.png" style="display:block;" height="100%">';
+      }
+    } else if (character_value == "Type95") {
+      if (skin_value == "0") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/TlIdMXj.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/7oj4t0K.png" style="display:block;" height="100%">';
+      } else if (skin_value == "1") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/68ipbU0.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/ASLehq6.png" style="display:block;" height="100%">';
+      }
+    } else if (character_value == "K11") {
+      if (skin_value == "0") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/LoXWY6j.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/t9k1noG.png" style="display:block;" height="100%">';
+      } else if (skin_value == "1") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/5dxkBWq.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/QOyDEbJ.png" style="display:block;" height="100%">';
+      }
+    } else if (character_value == "M4 SOPMOD II") {
+      if (skin_value == "0") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/1ymOFG1.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/hemoMhU.png" style="display:block;" height="100%">';
+      } else if (skin_value == "1") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/tFU4zOG.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/hmztamt.png" style="display:block;" height="100%">';
+      }
+    } else if (character_value == "AS Val") {
+      if (skin_value == "0") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/fcv2pGC.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/xtSc52i.png" style="display:block;" height="100%">';
+      } else if (skin_value == "1") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/XA9oo3Q.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/Sac6Cee.png" style="display:block;" height="100%">';
+      }
+    } else if (character_value == "Type56-1") {
+      if (skin_value == "0") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/K3nEN0f.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/nNJePBK.png" style="display:block;" height="100%">';
+      } else if (skin_value == "1") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/MBiI9Pc.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/Jb5CO72.png" style="display:block;" height="100%">';
+      }
+    } else if (character_value == "9A-91") {
+      if (skin_value == "0") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/zAO3pM4.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/JBqEKZz.png" style="display:block;" height="100%">';
+      } else if (skin_value == "1") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/1xEJUQW.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/h8Z5GQN.png" style="display:block;" height="100%">';
+      } else if (skin_value == "2") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/aOgcATH.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/mynrSJn.png" style="display:block;" height="100%">';
+      }
+    } else if (character_value == "CZ-805") {
+      if (skin_value == "0") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/jhMIRTP.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/o0D0Zy8.png" style="display:block;" height="100%">';
+      } else if (skin_value == "1") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/OSeZ7L3.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/6tyiU7I.png" style="display:block;" height="100%">';
+      }
+    } else if (character_value == "Gr MG5") {
+      if (skin_value == "0") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/OAJnnkR.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/x0UtMe0.png" style="display:block;" height="100%">';
+      } else if (skin_value == "1") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/e4pSRW0.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/oCItHzg.png" style="display:block;" height="100%">';
+      }
+    } else if (character_value == "Gr MG4") {
+      if (skin_value == "0") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/0sEWs4l.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/M1EJ89d.png" style="display:block;" height="100%">';
+      } else if (skin_value == "1") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/vhzTIP6.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/jZG3MU9.png" style="display:block;" height="100%">';
+      }
+    } else if (character_value == "M1918 mod") {
+      if (skin_value == "0") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/Ifx3p5k.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/p2WKo7e.png" style="display:block;" height="100%">';
+      } else if (skin_value == "1") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/xaVRmx0.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/ww9YUxf.png" style="display:block;" height="100%">';
+      }
+    } else if (character_value == "M1918") {
+      if (skin_value == "0") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/61mxUhV.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/CS25OC2.png" style="display:block;" height="100%">';
+      } else if (skin_value == "1") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/oFBGeBk.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/zDHQ4KQ.png" style="display:block;" height="100%">';
+      }
+    } else if (character_value == "FF M249SAW") {
+      if (skin_value == "0") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/trzTPEM.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/dWt3v0N.png" style="display:block;" height="100%">';
+      } else if (skin_value == "1") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/HYc5L5j.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/noc4kpt.png" style="display:block;" height="100%">';
+      }
+    } else if (character_value == "M1919A4") {
+      if (skin_value == "0") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/hs4FNZA.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/oKtLDKL.png" style="display:block;" height="100%">';
+      } else if (skin_value == "1") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/VitlbDI.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/SIvF56k.png" style="display:block;" height="100%">';
+      } else if (skin_value == "2") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/Upt3pbg.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/XbBr272.png" style="display:block;" height="100%">';
+      }
+    } else if (character_value == "LWMMG") {
+      if (skin_value == "0") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/qwxMmMr.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/yB7bT6M.png" style="display:block;" height="100%">';
+      } else if (skin_value == "1") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/TfNOkI9.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/fW8V8xS.png" style="display:block;" height="100%">';
+      }
+    } else if (character_value == "M590") {
+      if (skin_value == "0") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/De9zy3O.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/xxvCFz5.png" style="display:block;" height="100%">';
+      } else if (skin_value == "1") {
+        uncImageCell.innerHTML = '<img src="https://imgur.com/QNc0M0J.png" style="display:block;" height="100%">';
+        cImageCell.innerHTML = '<img src="https://imgur.com/MfpaoYe.png" style="display:block;" height="100%">';
+      }
+    }
+
+
+  }
   </script>
 
 </body>
